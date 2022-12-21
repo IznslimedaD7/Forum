@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <path d="m197,31.5l120,0c8.284,0 15,-6.716 15,-15s-6.716,-15 -15,-15l-120,0c-8.284,0 -15,6.716 -15,15s6.716,15 15,15z" fill="#ffffff" id="svg_2"/>
+   <path d="m317,61.5l-120,0c-8.284,0 -15,6.716 -15,15s6.716,15 15,15l120,0c8.284,0 15,-6.716 15,-15s-6.716,-15 -15,-15z" fill="#ffffff" id="svg_3"/>
+   <path d="m317,121.5l-120,0c-8.284,0 -15,6.716 -15,15s6.716,15 15,15l120,0c8.284,0 15,-6.716 15,-15s-6.716,-15 -15,-15z" fill="#ffffff" id="svg_4"/>
+  </g>
+ </g>
+</svg>

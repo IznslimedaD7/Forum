@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename= 'css/stylemain.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ url_for ('static', filename= 'js/script.js') }}" defer></script>
+    <meta charset="UTF-8">
+    <title>Foxum|{% block title %}{% endblock %}</title>
+</head>
+<body class="bg-zinc-900 text-white">
+    <header class="w-full font-sans bg-zinc-800 flex items-center place-content-between h-14 flex-row px-2">
+        <div class="flex items-center">
+        <div class="menu-list">
+            <div class="menu-button h-11 w-11 cursor-pointer hover:bg-slate-600 p-2 hover:rounded-full place-content-center">
+                <img src="{{ url_for ('static', filename= 'img/menu-white.png') }}">
+            </div>
+                <div class="menu-list-block z-2">
+                    <ul class="marker:hidden">
+                        <li><a href="" class=""></a></li>
+                    </ul>    
+                </div>
+        </div>
+            <a href="/" class="ml-4 forum-logo-libg-transparentnk">
+                <img src="{{ url_for ('static', filename= 'img/logo.png') }}" class="forum-logo-img h-12 w-10">
+            </a>
+        </div>
+        <div class="flex-initial">
+            <form>
+                <input class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300">
+            </form>
+        </div>
+        <div class="flex-initial row-end-4">
+            <a href="/" class="a-register__profile-manager hover:bg-slate-600 p-2 hover:rounded-full align-middle trp font-semibold">Sign up/Register</a>
+            <div class="profile_block">
+                <img class="profile_block__profile-img" src="">
+                <a href="/" class="hidden">name of profile</a>
+            </div>
+        </div>
+    </header>
+    <main class="w-4/6 h-full bg-stone-800 m-auto mt-2 pt-3 pb-8 p-5">
+        <h1>{% block h1 %} {% endblock %}</h1>
+        <div class="content-box">
+            {% block content %} {% endblock %}
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: ZKGN;
+    src: url(../fonts/ZenKakuGothicNew-Regular.ttf);
+}
+*{
+    font-family: ZKGN;
+}
+
+.menu-button{
+    z-index: 4;
+    transition: all 0.2s;
+}
+
+.anim{
+    transform: rotate(-90deg);
+    transition: all 1s;
+}
+.trp{
+    transition: all 0.2s;
+}
+input {outline:none;}
+.wid-300{
+    width: 300px;
+}

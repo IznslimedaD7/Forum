@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block h1 %}For using Foxum you need account.<br> That's not for long. Just register{% endblock %}
+{% block content %}
+<form method="post">
+    <input placeholder="Login" id='login' name='login' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+    <input placeholder="Nickname" id='nickname' name='nickname' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+
+    <input type="file" placeholder="Avatar your profile" id='profile_image' name='profile_image' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+
+    <input placeholder="Email" id='email' name='email' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+    <input type="hidden" id='date_of_create' name='date_of_create' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+    <input placeholder="Password" id='password' name='password' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+    <input placeholder="Password again" id='password2' name='password2' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+    <input placeholder="Register" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+
+</form>
+{% endblock %}
