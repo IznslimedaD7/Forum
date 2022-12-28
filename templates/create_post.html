@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Create post in {{cat.title_category}}{% endblock %}
+{% block h1 %}
+    <form method="post" enctype="multipart/form-data">
+        <input placeholder="Title" id='title' name='title' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        <input placeholder="Description" id='description' name='description' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        <input type='file' placeholder="Image" id='image' name='image' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        {{ ckeditor.load(pkg_type="full") }}
+        {{ ckeditor.create() }}
+        <input placeholder="Create post" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+
+    </form>
+{% endblock %}
+{% block content %} {% endblock %}

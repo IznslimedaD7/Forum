@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Create post in {{cat.title_category}}{% endblock %}
+{% block h1 %}
+    {{ post.title_post }}
+    {{ post.post_body|safe }}
+    <div>
+        <p>Comment:</p>
+        <form method="post">
+            <input placeholder="Write your comment" id='body' name='body' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+            <input placeholder="Submit comment" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+        </form>
+        <div>
+        {% for c in comm %}
+        <li>
+            <div>{{ c.author}}</div>
+            <div>{{c.comment_body}}</div>
+            <div>{{c.date_post}}</div>
+        </li>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block content %} {% endblock %}

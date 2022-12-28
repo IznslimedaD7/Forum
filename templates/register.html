@@ -2,7 +2,7 @@
 {% block title %}Register{% endblock %}
 {% block h1 %}For using Foxum you need account.<br> That's not for long. Just register{% endblock %}
 {% block content %}
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <input placeholder="Login" id='login' name='login' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
     <input placeholder="Nickname" id='nickname' name='nickname' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
 
@@ -15,4 +15,6 @@
     <input placeholder="Register" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
 
 </form>
+<p>Already registered you can login to your account</p>
+<a href="/login">Login</a>
 {% endblock %}
