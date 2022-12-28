@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block h1 %}
+    <form method="post">
+            <input placeholder="Login" id='login' name='login' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+                <input placeholder="Password" id='password' name='password' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+
+            <input type="checkbox" name="remember"><label>Remember me</label><br>
+                <input placeholder="Login" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+
+    </form>
+{% endblock %}
+{% block content %} {% endblock %}

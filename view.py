@@ -135,3 +135,8 @@ def postview(id, name):
             return redirect(f'/categories/{id}/view/{name}')
     else:
         return render_template('postview.html', cat=cat, post=post, comm=comm)
+
+@app.route('/profile/<login>')
+def profile(login):
+    user = Users.query.filter_by(login=login).first_or_404()
+    cats = Categories.filter_by(login=login).all()

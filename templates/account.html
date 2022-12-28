@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} {{ name.login }} {% endblock %}
+{% block h1 %}
+<h1>{{ name.nickname }}</h1>
+<img src="{{ url_for ('static', filename= 'avatars/'+ name.profile_image) }}">
+<div>{{ name.email }}</div>
+<div>
+    <p>Posts and Categories {{name.nickname}}</p>
+</div>
+{% endblock %}
+{% block content %} {% endblock %}
