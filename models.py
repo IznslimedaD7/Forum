@@ -51,7 +51,7 @@ class Posts(db.Model):
     __tablename__ = 'posts'
     id = db.Column(db.Integer, primary_key=True)
     title_post = db.Column(db.String(100), nullable=False)
-    short_description_of_post = (db.String(150))
+    short_description_of_post = db.Column(db.String(150))
     post_image = db.Column(db.Text)
     post_body = db.Column(db.Text)
     post_creator = db.Column(db.Integer, db.ForeignKey('Users.id'), nullable=False)

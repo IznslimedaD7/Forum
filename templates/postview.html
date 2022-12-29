@@ -5,17 +5,17 @@
     {{ post.post_body|safe }}
     <div>
         <p>Comment:</p>
+        {% if current_user.is_authenticated %}
         <form method="post">
             <input placeholder="Write your comment" id='body' name='body' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
             <input placeholder="Submit comment" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
         </form>
+        {% endif %}
         <div>
         {% for c in comm %}
-        <li>
-            <div>{{ c.author}}</div>
+            <div>{{user.query.filter_by(id=c.author).first_or_404().nickname}}</div>
             <div>{{c.comment_body}}</div>
             <div>{{c.date_post}}</div>
-        </li>
         {% endfor %}
         </div>
     </div>

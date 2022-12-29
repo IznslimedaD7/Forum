@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Redact profile{% endblock %}
+{% block h1 %}
+<form method="post" enctype="multipart/form-data">
+        <input placeholder="Nickname" id='nickname' name='nickname' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        <input type="file" placeholder="Avatar your profile" id='profile_image' name='profile_image' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        <input placeholder="Create Category" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+
+</form>
+{% endblock %}
+{% block content %} {% endblock %}

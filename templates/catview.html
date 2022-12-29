@@ -5,10 +5,8 @@
     <div>
         <p>Posts:</p>
         {% for p in posts %}
-        <li>
             <p>{{ p.title_post}}</p>
             <a href="/categories/{{cat.id}}/view/{{p.id}}">{{ p.title_post}}</a>
-        </li>
         {% endfor %}
     </div>
 <a href="/categories/{{cat.id}}/create-post">Create post</a>

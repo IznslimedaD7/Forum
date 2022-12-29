@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
-{% block title %} {{ name.login }} {% endblock %}
+{% block title %} {{user.nickname}} {% endblock %}
 {% block h1 %}
-<h1>{{ name.nickname }}</h1>
-<img src="{{ url_for ('static', filename= 'avatars/'+ name.profile_image) }}">
-<div>{{ name.email }}</div>
+{% endblock %}
+{% block content %}
 <div>
-    <p>Posts and Categories {{name.nickname}}</p>
+    <div>{{ user.nickname }}</div>
+    <div><img src="{{ url_for ('static', filename= 'avatars/'+ user.profile_image) }}"></div>
+</div>
+<div>
+    <div>Posts:</div>
+    {% if posts %}
+        {% for p in posts %}
+            <div>{{p.title_post}}</div>
+        {% endfor %}
+    {% else %}
+        <div>{{ user.nickname }} didn`t create no one more post</div>
+    {% endif %}
 </div>
 {% endblock %}
-{% block content %} {% endblock %}

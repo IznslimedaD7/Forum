@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Redact{% endblock %}
+{% block h1 %}
+
+{% endblock %}
+{% block content %}
+    <h1>Redact post: {{post.title_post}} {{ post.short_description_of_post }}</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input value="{{ post.short_description_of_post }}" placeholder="Description" id='description' name='description' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        <input type='file' placeholder="Image" id='image' name='image' class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2"><br>
+        {{ ckeditor.load(pkg_type="full") }}
+        {{ ckeditor.create(value=post.post_body) }}
+        <input placeholder="Redact post" type="submit" class="bg-gray-700 align-top p-1 rounded-md border-solid border-slate-600 border-0.5 wid-300 mt-2">
+
+    </form>
+{% endblock %}
